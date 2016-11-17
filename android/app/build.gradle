@@ -75,7 +75,6 @@ def enableSeparateBuildPerCPUArchitecture = false
  * Run Proguard to shrink the Java bytecode in release builds.
  */
 def enableProguardInReleaseBuilds = false
-
 def storePw ='wss520xyc'
 def kAlias ='my-key-alias'
 def keyPw ='wss520xyc'
@@ -84,7 +83,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.reactnativegank"
+        applicationId "com.subway"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
@@ -95,7 +94,7 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file('D:/codeComposer/React-Native-Gank-master/android/app/my-release-key.keystore')
+            storeFile file(MYAPP_RELEASE_STORE_FILE)
             keyAlias (kAlias)
             storePassword (storePw)
             keyPassword (keyPw)
